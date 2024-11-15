@@ -1,6 +1,6 @@
 # STIM 
 
-STIM (Synchronized Topological Individual Mapper) is a framework designed for investigating individual differences in low-dimensional brain dynamics under naturalistic stimuli. Based on the Mapper algorithm, STIM modifies its approach according to the natural stimulus conditions. It maps time series data into a lower-dimensional space, generating group-level dynamics and measuring both global and local topological similarities between individuals.
+STIM (Synchronized Topological Individual Mapper) is a framework designed for investigating individual differences in low-dimensional brain dynamics under naturalistic stimuli. Based on the Mapper algorithm, STIM modifies its approach according to the naturalistic stimulus conditions. It maps time series data into a lower-dimensional space, generating group-level dynamics and measuring both global and local topological similarities between individuals.
 
 For a detailed description of the STIM framework and its application across multiple datasets, please refer to the article:  
 [**Mapping Individual Differences in the Topological Landscape of Naturalistic Brain Dynamics**](https://www.biorxiv.org/content/10.1101/2024.06.20.599966v1)
@@ -9,7 +9,7 @@ For step-by-step instructions on how to use STIM, please refer to the tutorial s
 
 ## Tutorial
 
-In this tutorial, we provide an overview of how to use STIM for preliminary feature extraction. For more detailed instructions, refer to the notebook located in `./Tutorial/STIM_Tutorial.ipynb`. STIM is fully implemented in Python, and the necessary packages are listed in the code availability section of the referenced article.
+In this tutorial, we provide an overview of how to use STIM for preliminary feature extraction. For more detailed information, refer to the notebook located in `./Tutorial/STIM_Tutorial.ipynb`. STIM is fully implemented in Python, and the necessary packages are listed in the code availability section of the referenced article.
 
 ### Data Import
 
@@ -28,7 +28,7 @@ for i in movie_ind:
 
 ### Building Low-Dimensional Embeddings with STIM
 
-We begin by using standard parameters to compute low-dimensional embeddings. At this point, data from all movies are combined, and the resulting individual low-dimensional dynamics time series represent the aggregated time points across all movie clips. The group-average low-dimensional dynamics is then converted into a shape graph using the traditional Mapper approach (here, we use a NetworkX graph).
+We begin by using standard parameters to compute low-dimensional embeddings. At this point, data from all movies are combined, and the resulting individual low-dimensional dynamics time series represent the aggregated time points across all movie clips. The group-average low-dimensional dynamics is then converted into a shape graph using the traditional Mapper approach (here, we convert to a NetworkX graph).
 
 ```python
 # Select a filter (here, we use UMAP)
@@ -60,12 +60,8 @@ In this tutorial, we use the first movie clip as an example:
 
 ```python
 # The first movie clip has 243 time points
-hcp_tcm_mov1 = hcp_170subs_tcm[:, :243, :243]
+hcp_tcm_mov1 = np.array(hcp_170subs_tcm)[:,:243,:243]
 
 # Use the average TCM as the template
-hcp_local_geo = STIM_local_geometry(indi_TCM=hcp_tcm_mov1, template_TCM=hcp_tcm_mov1.mean(axis=0))
+hcp_local_geo, clip_events = STIM_local_geometry(indi_TCM=hcp_tcm_mov1,template_TCM=hcp_tcm_mov1.mean(axis=0))
 ```
-
----
-
-Let me know if you'd like any adjustments or further clarifications!
