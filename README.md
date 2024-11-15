@@ -40,6 +40,10 @@ hcp_13clips_umap = STIM_LowDimSpace(hcp_13clips_ts, umap_model)
 # Compute group consensus
 group_umap = hcp_13clips_umap.mean(axis=0)
 graph_group = g_mapper_graph(low_d_embeds=scale(group_umap, axis=0), cover_n=12, cover_overlap=0.5, eps=0.7)
+
+# visualize shape graph
+dG = DyNeuGraph(G=graph_group)
+dG.visualize('your_path')
 ```
 
 ### Building Individual and Group TCMs with STIM
