@@ -9,7 +9,7 @@ For step-by-step instructions on how to use STIM, please refer to the tutorial s
 
 ## Tutorial
 
-In this tutorial, we provide an overview of how to use STIM for preliminary feature extraction. For more detailed information, refer to the notebook located in `./Tutorial/STIM_Tutorial.ipynb`. STIM is fully implemented in Python, and the necessary packages are listed in the code availability section of the referenced article.
+In this tutorial, we provide an overview of how to use STIM for preliminary feature extraction. For more detailed information, refer to the notebook located in `STIM_Tutorial.ipynb`. STIM is fully implemented in Python, and the necessary packages are listed in the code availability section of the referenced article.
 
 ### Data Import
 
