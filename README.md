@@ -3,7 +3,7 @@
 STIM (Synchronized Topological Individual Mapper) is a framework designed for investigating individual differences in low-dimensional brain dynamics under naturalistic stimuli. Based on the Mapper algorithm, STIM modifies its approach according to the naturalistic stimulus conditions. It maps time series data into a lower-dimensional space, generating group-level dynamics and measuring both global and local topological similarities between individuals.
 
 For a detailed description of the STIM framework and its application across multiple datasets, please refer to the article:  
-[**Mapping Individual Differences in the Topological Landscape of Naturalistic Brain Dynamics**](https://www.biorxiv.org/content/10.1101/2024.06.20.599966v1)
+[**Mapping Individual Differences in the Topological Landscape of Naturalistic Brain Dynamics**](https://www.biorxiv.org/content/10.1101/2024.06.20.599966v2)
 
 For step-by-step instructions on how to use STIM, please refer to the tutorial section below.
 
