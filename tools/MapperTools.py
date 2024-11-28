@@ -7,8 +7,16 @@ import multiprocessing  # Import multiprocessing for parallel processing
 import numpy as np
 from sklearn.cluster import DBSCAN
 
+
 # Function to shape a graph into a Temporal Coherence Matrix (TCM)
+
 def g_TCM(graph, nTR):
+    """
+    Reference: 
+    - This code is modified from dyneusr/dyneusr/tools/graph_utils.py
+    - Licensed under the Clear BSD License
+    """
+    
     # Extract unique data IDs from the graph's nodes
     data_ids = np.unique([_ for n, d in graph['nodes'].items() for _ in d])
     
@@ -22,6 +30,11 @@ def g_TCM(graph, nTR):
 
 # Function to extract matrices from a processed graph
 def extract_matrices_(G, nTR, index=None, **kwargs):
+    """
+    Reference: 
+    - This code is modified from dyneusr/dyneusr/tools/graph_utils.py
+    - Licensed under the Clear BSD License
+    """
     # If no index is provided, create a unique list of node members
     if index is None:
         index = np.unique([__ for n, _ in G.nodes(data='members') for __ in _])
