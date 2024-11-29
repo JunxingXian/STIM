@@ -2,7 +2,7 @@
 
 STIM (Synchronized Topological Individual Mapper) is a framework designed for investigating individual differences in low-dimensional brain dynamics under naturalistic stimuli. By leveraging Topological Data Analysis (TDA), STIM aligns high-dimensional whole-brain activities across individuals during movie fMRI into a shared low-dimensional state space, enabling quantification of both global and local topological similarities between individuals.
 
-For a detailed description of the STIM framework and its application across multiple datasets, please refer to the article:  
+For a detailed description of the STIM framework and its application across multiple datasets, please refer to the pre-print:  
 [**Probing Individual Differences in the Topological Landscape of Naturalistic Brain Dynamics**](https://www.biorxiv.org/content/10.1101/2024.06.20.599966v2)
 
 For step-by-step instructions on how to use STIM, please refer to the quick start section below.
