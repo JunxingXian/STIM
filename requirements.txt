@@ -1,0 +1,9 @@
+numpy
+sklearn
+umap
+tqdm
+os
+dyneusr
+kmapper
+multiprocessing
+PELT
